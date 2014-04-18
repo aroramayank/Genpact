@@ -1,0 +1,18 @@
+
+function min(list,valueSelectorFn){
+   var result = Number.MAX_VALUE;
+   for(var i=0;i<list.length;i++){
+     var currVal = valueSelectorFn(list[i]);
+     if (currVal < result) result = currVal;
+   }
+   return result;
+}
+
+function max(list,valueSelectorFn){
+   var result = Number.MIN_VALUE;
+   for(var i=0;i<list.length;i++){
+     var currVal = valueSelectorFn(list[i]);
+     if (currVal > result) result = currVal;
+   }
+   return result;
+}
